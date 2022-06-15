@@ -1,0 +1,28 @@
+
+Copy terraform file in any folder and updated the path in environment variables
+
+Create Service Principle!
+
+az ad sp create-for-rbac -n terraform --role contributor --scopes "subscription ID"
+
+Create service connection from Azuredevops portal.
+
+az storage account create --resource-group "name" --name sktfaccount --sku Standarnd_LRS --encryption-services blob
+
+How to get the key value?
+
+az storage account keys list --resource-group "name" --account-name sktfaccount
+
+How to create a container?
+
+az storage container create --name sktfcontainer --account-name sktfaccount --account-key
+
+create new repositoty
+create new file
+
+before create a pipeline install terrafrom extension from market place in Azure devops
+
+build a pipeline ( validate & deploy )
+
+
+
